@@ -1,6 +1,6 @@
 {
   "name": "Chat robot",
   "tagline": "123",
-  "body": "qwerqwer",
+  "body": "<!DOCTYPE html>\r\n<html>\r\n<head lang=\"en\">\r\n    <meta charset=\"UTF-8\">\r\n    <title></title>\r\n</head>\r\n<body>\r\n吃什么\r\n</body>\r\n</html>",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
