@@ -3,12 +3,25 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <script src="test/js/zepto.js"></script>
 </head>
 <body>
-<ul>
+<ul class="eating-list">
     <li>羊肉泡</li>
     <li>饺子</li>
     <li>酸菜鱼</li>
+    <li>包子</li>
 </ul>
+<button onclick="get()">吃什么</button>
+<script>
+    function get(){
+       var i = ran(0, $('.eating-list li').length);
+        alert($('.eating-list li')[i].innerText)
+    }
+    var ran = function(lowerValue, upperValue){
+        var choice = upperValue - lowerValue;
+        return Math.floor(Math.random()*choice+lowerValue);
+    }
+</script>
 </body>
 </html>
