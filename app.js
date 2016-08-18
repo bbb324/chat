@@ -17,7 +17,7 @@ app.set('view engine', 'xtpl');  //因为 node_modules 中 express 是 view engi
 app.set('views', __dirname + '/views');
 
 
-app.use(express.static('public'));
+app.use(express.static('/'));
 
 app.get('/', function(req, res){
 
