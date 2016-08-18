@@ -5,6 +5,11 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var mysql = require('mysql');
+var jsonfile = require('jsonfile');
+
+var file = 'public/data/data.json';
+
+
 var conn = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -14,10 +19,17 @@ var conn = mysql.createConnection({
 })
 
 app.set('view engine', 'xtpl');  //因为 node_modules 中 express 是 view engin 而不是 views
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/public/views');
 
 
-app.use(express.static('/'));
+app.use(express.static('/public'));
+
+
+conn.query('select * from eat', function(err, rows, fields){
+  jsonfile.writeFile(file, rows, function(err, obj){
+    console.error(err)
+  })
+})
 
 app.get('/', function(req, res){
 

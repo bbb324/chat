@@ -34,7 +34,8 @@
     "webpack": "^1.13.1",
     "mysql": "^2.11.1",
     "xtemplate": "^4.5.1",
-    "xtpl": "^3.2.0"
+    "xtpl": "^3.2.0",
+    "jsonfile": "*"
   },
   "homepage": "https://github.com/bbb324/chat#readme"
 }
