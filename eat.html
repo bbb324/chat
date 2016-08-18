@@ -17,7 +17,7 @@
 <script>
     function get(){
        var i = ran(0, $('.eating-list li').length);
-        alert('吃个鸡巴，low逼')
+        alert($('.eating-list li')[i].innerText)
     }
     var ran = function(lowerValue, upperValue){
         var choice = upperValue - lowerValue;
