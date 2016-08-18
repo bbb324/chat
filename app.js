@@ -19,10 +19,10 @@ var conn = mysql.createConnection({
 })
 
 app.set('view engine', 'xtpl');  //因为 node_modules 中 express 是 view engin 而不是 views
-app.set('views', __dirname + '/public/views');
+app.set('views', __dirname + '/views');
 
 
-app.use(express.static('/public'));
+app.use(express.static('/chat'));
 
 
 conn.query('select * from eat', function(err, rows, fields){
