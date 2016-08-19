@@ -6,9 +6,11 @@ var bodyParser = require('body-parser');
 var app = express();
 var mysql = require('mysql');
 var jsonfile = require('jsonfile');
-
+var multer = require('multer');
+var upload = multer({dest: 'uploads/'});
 var file = 'public/data/data.json';
 
+const homeController = require('HomeController');
 
 var conn = mysql.createConnection({
   host: 'localhost',
@@ -22,8 +24,13 @@ app.set('view engine', 'xtpl');  //因为 node_modules 中 express 是 view engi
 app.set('views', __dirname + '/views');
 
 
-app.use(express.static('/chat'));
+app.use(express.static('/chat'));  //设置最初一级访问目录
+app.use('/', homeController.router);
 
+
+//app.get('/', function(req, res){
+//  res.render('index', {name: 'ww'});
+//})
 
 conn.query('select * from eat', function(err, rows, fields){
   jsonfile.writeFile(file, rows, function(err, obj){
@@ -31,15 +38,9 @@ conn.query('select * from eat', function(err, rows, fields){
   })
 })
 
-app.get('/', function(req, res){
+app.post('/add_more',upload.any(), function(req, res){
+  console.log(req)
+})
 
-  conn.query('select * from eat', function(err, rows, fields){
-    if(err) throw err;
-
-    res.render('index', {name: rows[0].name})
-  })
-
-  //res.render('index')
-});
 
 app.listen(4000);
