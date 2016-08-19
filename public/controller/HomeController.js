@@ -3,13 +3,14 @@
  */
 const express = require('express');
 
-class HomeContrlller{
+class HomeController{
   constructor(){
     this.router = express.Router();
     this.router.all('/', this.index);
   }
   index(req, res){
-    return res.redirect('index')
+
+    return res.render('index', {name: 'ww'});
   }
 }
-modules.exports = new HomeContrlller();
+module.exports = new HomeController();
