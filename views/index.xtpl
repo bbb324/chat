@@ -10,7 +10,7 @@
     </title>
     <link rel="stylesheet" href="/public/css/main.css">
 </head>
-    <h1>tt {{name}}</h1>
+    <h1>ttq {{name}}</h1>
 <body>
 </body>
 </html>
