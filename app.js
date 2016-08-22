@@ -7,6 +7,7 @@ var app = express();
 var mysql = require('mysql');
 var jsonfile = require('jsonfile');
 const homeController = require('./public/controller/HomeController');
+const homeController = require('./public/controller/SocketController');
 var fs = require('fs');
 
 
@@ -30,6 +31,7 @@ app.set('views', __dirname + '/views');
 
 app.use(express.static('/chat'));  //设置最初一级访问目录
 app.use(homeController.router); //引导对应的视图文件到controller里面去解决
+app.use(socketController.router); //引导对应的视图文件到controller里面去解决
 
 
 conn.query('select * from eat', function(err, rows, fields){
