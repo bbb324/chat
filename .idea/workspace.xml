@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6e8d5d4-4acc-4522-b607-c4f11aefaddd" name="Default" comment="通过子路由设置打开页面" />
+    <list default="true" id="b6e8d5d4-4acc-4522-b607-c4f11aefaddd" name="Default" comment="通过子路由设置打开页面">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="chat.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
