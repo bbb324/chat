@@ -3,16 +3,20 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <script src="test/js/zepto.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="public/js/zepto.js"></script>
 </head>
 <body>
 <ul class="eating-list">
-    <li>羊肉123泡</li>
-    <li>饺子</li>
-    <li>酸菜鱼</li>
-    <li>包子</li>
+
 </ul>
-<button onclick="get()">吃什么</button>
+<button onclick="get()">吃什么1</button>
+<form action="add_more" method="post">
+    <input type="text" name="food">
+    <input type="submit" value="submit">
+</form>
+<script src="public/js/main.js"></script>
+<script src="public/js/main.js"></script>
 <script>
     function get(){
        var i = ran(0, $('.eating-list li').length);
