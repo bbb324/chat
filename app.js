@@ -29,27 +29,51 @@ app.set('views', __dirname + '/views');
 
 
 app.use(express.static('/chat'));  //设置最初一级访问目录
-app.use('/', homeController.router); //引导对应的视图文件到controller里面去解决
+app.use(homeController.router); //引导对应的视图文件到controller里面去解决
 
 
 conn.query('select * from eat', function(err, rows, fields){
   jsonfile.writeFile(file, rows, function(err, obj){
     console.error(err)
   })
-})
+});
 
 app.post('/add_more',upload.any(), function(req, res){
   console.log(req)
-})
+});
 
-
+let eventNum = 0;
 fs.watch('target.txt', function(event, filename){
-  console.log('Event: '+event+' , for file: '+filename);
-})
+  eventNum++;
+  console.log('Event #: '+eventNum+' : '+event+' , for file: '+filename);
+});
 
 
 console.log('Now watching target for changes...')
 
+function strictAdd(x, y, callBack){
+  if(x<0){
+    callBack('x can not be less than 0', null);
+  }else if(y<0){
+    callBack('Y can not be less than 0', null);
+  }else{
+    callBack(null, x + y);
+  }
+};
 
+
+fs.readFile('targ1et.txt', function(err, data){
+  if(err)console.log(err.path);
+  console.log(data)
+})
+
+
+
+strictAdd(1, 8, function(err, result){
+  if(err)console.log(err)
+  else{
+    console.log(result)
+  }
+})
 
 app.listen(4000);
