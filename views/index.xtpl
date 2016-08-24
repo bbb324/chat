@@ -9,10 +9,12 @@
         400 - Mak1eblock Passport
     </title>
     <script src="/public/js/zepto.js"></script>
-    <script src="/public/js/main.js"></script>
+
     <link rel="stylesheet" href="/public/css/main.css">
 </head>
     <h1>ttq {{name}}</h1>
+    <input type="text" class="mmm">
+<script src="/public/js/main.js"></script>
 <body>
 </body>
 </html>

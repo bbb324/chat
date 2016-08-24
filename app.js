@@ -9,21 +9,14 @@ var mysql = require('mysql');
 var jsonfile = require('jsonfile');
 const homeController = require('./public/controller/HomeController');
 var fs = require('fs');
-
-
+var config = require('./config.js');
 var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
 var file = 'public/data/data.json';
 
 
+var conn = mysql.createConnection(config.connection);
 
-var conn = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '111111',
-  database: 'test',
-  port: 3306
-});
 
 app.set('view engine', 'xtpl');  //因为 node_modules 中 express 是 view engin 而不是 views
 app.set('views', __dirname + '/views');
@@ -33,9 +26,7 @@ app.use(express.static('/chat'));  //设置最初一级访问目录
 app.use(homeController.router); //引导对应的视图文件到controller里面去解决
 
 conn.query('select * from eat', function(err, rows, fields){
-  jsonfile.writeFile(file, rows, function(err, obj){
-    console.error(err)
-  })
+  console.log(rows)
 });
 
 app.post('/add_more',upload.any(), function(req, res){
