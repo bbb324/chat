@@ -51,3 +51,13 @@ getJSON('/public/data/data.json')
       console.log(d);
     })
   });
+
+/*实时查询数据库并返回*/
+$('.mmm').on('input propertychange', search);
+
+function search(e) {
+  console.log(this.value);
+  $.post('searchdata', {"name": this.value}, function (d) {
+    console.log(d)
+  })
+}
