@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/public/css/main.css">
 </head>
     <h1>ttq {{name}}</h1>
-    <input type="text" class="mmm">
+<input type="text" class="mmm">
 <script src="/public/js/main.js"></script>
 <body>
 </body>

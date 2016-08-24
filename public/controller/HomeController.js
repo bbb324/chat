@@ -19,12 +19,13 @@ class HomeController{
   index(req, res){
     return res.render('index', {name: 'ww'});
   }
-  search(req, res){
+
+  search(req, res) {
     var arr = [];
     var conn = mysql.createConnection(config.connection);
-    conn.query('select * from str where strs like "%'+ req.body.name +'%"', function(err, rows, fields){
+    conn.query('select * from str where strs like "%' + req.body.name + '%"', function (err, rows, fields) {
 
-      for(var i=0; i<rows.length; i++){
+      for (var i = 0; i < rows.length; i++) {
         arr[i] = rows[i].strs;
       }
       res.json(arr);
