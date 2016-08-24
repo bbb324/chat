@@ -64,5 +64,5 @@ strictAdd(1, 8, function(err, result){
     console.log(result)
   }
 });
-
+console.log('listen on 4000');
 app.listen(4000);

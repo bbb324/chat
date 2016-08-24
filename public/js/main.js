@@ -54,10 +54,35 @@ getJSON('/public/data/data.json')
 
 /*实时查询数据库并返回*/
 $('.mmm').on('input propertychange', search);
-
+$('.mmm').on('keydown', getEnter);
+var st = '';
 function search(e) {
-  console.log(this.value);
   $.post('searchdata', {"name": this.value}, function (d) {
-    console.log(d)
+
+    for (var i = 0; i < d.length; i++) {
+      st += '<li>' + d[i] + '</li>'
+    }
+    $('.comp').html('');
+    $('.comp').html(st);
+    st = '';
   })
+}
+/*查询显示*/
+function getEnter() {
+  if (event.keyCode == 13) {
+    var st = '<div class="insertion">' + this.value + '</div>';
+    $('.ins')[0].insertBefore($(st)[0], $('.mmm')[0]);
+    $('.mmm')[0].value = '';
+    console.log('enter')
+  }
+  if (event.which == 8) {
+    if (this.value == '') {
+      console.log(this.previousSibling);
+      if (this.previousSibling != null) {
+        this.previousSibling.remove();
+      }
+    } else {
+      console.log('not null')
+    }
+  }
 }
