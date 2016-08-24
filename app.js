@@ -1,13 +1,13 @@
 /**
  * Created by Administrator on 2016/8/18.
  */
+'use strict';
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var mysql = require('mysql');
 var jsonfile = require('jsonfile');
 const homeController = require('./public/controller/HomeController');
-const homeController = require('./public/controller/SocketController');
 var fs = require('fs');
 
 
@@ -31,8 +31,6 @@ app.set('views', __dirname + '/views');
 
 app.use(express.static('/chat'));  //设置最初一级访问目录
 app.use(homeController.router); //引导对应的视图文件到controller里面去解决
-app.use(socketController.router); //引导对应的视图文件到controller里面去解决
-
 
 conn.query('select * from eat', function(err, rows, fields){
   jsonfile.writeFile(file, rows, function(err, obj){
@@ -44,14 +42,14 @@ app.post('/add_more',upload.any(), function(req, res){
   console.log(req)
 });
 
-let eventNum = 0;
+var eventNum = 0;
 fs.watch('target.txt', function(event, filename){
   eventNum++;
   console.log('Event #: '+eventNum+' : '+event+' , for file: '+filename);
 });
 
 
-console.log('Now watching target for changes...')
+console.log('Now watching target for changes...');
 
 function strictAdd(x, y, callBack){
   if(x<0){
@@ -61,21 +59,19 @@ function strictAdd(x, y, callBack){
   }else{
     callBack(null, x + y);
   }
-};
-
-
+}
 fs.readFile('targ1et.txt', function(err, data){
   if(err)console.log(err.path);
   console.log(data)
-})
+});
 
 
 
 strictAdd(1, 8, function(err, result){
-  if(err)console.log(err)
+  if (err)console.log(err);
   else{
     console.log(result)
   }
-})
+});
 
 app.listen(4000);

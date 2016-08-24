@@ -1,6 +1,7 @@
 /**
  * Created by Administrator on 2016/8/19.
  */
+'use strict';
 const express = require('express');
 const co = require('co');
 class HomeController{
