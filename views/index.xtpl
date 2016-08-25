@@ -16,7 +16,14 @@
 <div class="ins"><input type="text" class="mmm" id="tags"></div>
 <ul class="comp"></ul>
 
-
+<!--通过css设置radio btn的样式-->
+<div>
+    <input class="magic-radio" type="radio" name="radio" id="option_1">
+    <label class="poll-option-text" for="option_1">1本</label>
+    <input class="magic-radio" type="radio" name="radio" id="option_2">
+    <label class="poll-option-text" for="option_2">2本</label>
+</div>
+<!--通过css设置radio btn的样式 end-->
 <script src="/public/js/main.js"></script>
 <body>
 </body>

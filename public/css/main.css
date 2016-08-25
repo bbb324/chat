@@ -51,3 +51,23 @@ body{
     color: red;
     font-weight:bold;
 }
+
+/*radio btn 的样式，通过图片控制*/
+input[type=radio] {
+    display: none;
+}
+
+input[type=radio]:checked + label {
+    background-image: url(http://bbsimg.feidee.com/m/static/img/detail/radio-checked.png);
+}
+
+.poll-option-text {
+    background-repeat: no-repeat;
+    background-position: 0 0px;
+    padding-left: 27px;
+    background-image: url(http://bbsimg.feidee.com/m/static/img/detail/radio-unchecked.png);
+    background-size: 22px;
+    display: block;
+    line-height: 22px;
+}
+
