@@ -50,6 +50,7 @@ getJSON('/public/data/data.json')
     getJSON('/public/data/' + post + '.json').then(function (d) {
       console.log(d);
     })
+
   });
 
 /*实时查询数据库并返回*/
