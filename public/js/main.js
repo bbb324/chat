@@ -87,3 +87,22 @@ function getEnter() {
     }
   }
 }
+
+$('.single-draft li').on('click', function (e) {
+  $('#dropdownMenu1').html($(this).text() + '<span class="caret"></span>');
+  console.log($(this).text() + ' from 1')
+});
+
+
+/*通过多个菜单层级来获取信息*/
+$('.multi-draft li').on('click', function (e) {
+  $('.dropdown-toggle-1').text($(this).text());
+  console.log($(this).text());
+  e.stopPropagation();  // 阻止冒泡，在on事件里面会绑定多次lick事件，这样可以避免
+});
+
+/*
+ window.onscroll = function(){
+ var height = document.documentElement.scrollTop || document.body.scrollTop;
+ $('.auto-follow')[0].style.top =height+'px';
+ }*/

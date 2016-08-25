@@ -78,7 +78,7 @@ input[type=checkbox]:checked + label {
 }
 
 /*多层级菜单 multi menu*/
-.dropdown-submenu {
+.navbar-collapse, .dropdown-submenu {
     position: relative;
 }
 
@@ -109,19 +109,20 @@ input[type=checkbox]:checked + label {
     margin-top: 5px;
     margin-right: -10px;
 }
-
 .dropdown-submenu:hover > a:after {
     border-left-color: #fff;
 }
 
-.dropdown-submenu.pull-left {
-    float: none;
+/*跟随滚动*/
+.test {
+    height: 3000px;
 }
 
-.dropdown-submenu.pull-left > .dropdown-menu {
-    left: -100%;
-    margin-left: 10px;
-    -webkit-border-radius: 6px 0 6px 6px;
-    -moz-border-radius: 6px 0 6px 6px;
-    border-radius: 6px 0 6px 6px;
+.auto-follow {
+    width: 150px;
+    height: 150px;
+    background: #000;
+    position: fixed; /*如果用absolute 即跟随滚动，就打开onscroll事件*/
+    top: 50px;
+    right: 0;
 }
