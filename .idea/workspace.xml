@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0560f4db-06d7-41fe-8c7f-f1c9500bb64a" name="Default" comment="ignore的选项">
+    <list default="true" id="0560f4db-06d7-41fe-8c7f-f1c9500bb64a" name="Default" comment="学习cookie的使用，添加cookie-parser可以在后端读取前端设置的cookie">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/acorn" afterPath="$PROJECT_DIR$/node_modules/.bin/acorn" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/bittorrent-tracker" afterPath="$PROJECT_DIR$/node_modules/.bin/bittorrent-tracker" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/cleancss" afterPath="$PROJECT_DIR$/node_modules/.bin/cleancss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/create-torrent" afterPath="$PROJECT_DIR$/node_modules/.bin/create-torrent" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/ecstatic" afterPath="$PROJECT_DIR$/node_modules/.bin/ecstatic" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/errno" afterPath="$PROJECT_DIR$/node_modules/.bin/errno" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/he" afterPath="$PROJECT_DIR$/node_modules/.bin/he" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/image-size" afterPath="$PROJECT_DIR$/node_modules/.bin/image-size" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/json2proto" afterPath="$PROJECT_DIR$/node_modules/.bin/json2proto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/json5" afterPath="$PROJECT_DIR$/node_modules/.bin/json5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/mkdirp" afterPath="$PROJECT_DIR$/node_modules/.bin/mkdirp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/multicast-dns" afterPath="$PROJECT_DIR$/node_modules/.bin/multicast-dns" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/network-address" afterPath="$PROJECT_DIR$/node_modules/.bin/network-address" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/parse-torrent" afterPath="$PROJECT_DIR$/node_modules/.bin/parse-torrent" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/proto2js" afterPath="$PROJECT_DIR$/node_modules/.bin/proto2js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/rimraf" afterPath="$PROJECT_DIR$/node_modules/.bin/rimraf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/semver" afterPath="$PROJECT_DIR$/node_modules/.bin/semver" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/sha.js" afterPath="$PROJECT_DIR$/node_modules/.bin/sha.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/uglifyjs" afterPath="$PROJECT_DIR$/node_modules/.bin/uglifyjs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/vlc-command" afterPath="$PROJECT_DIR$/node_modules/.bin/vlc-command" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/controller/HomeController.js" afterPath="$PROJECT_DIR$/public/controller/HomeController.js" />
     </list>
     <ignored path="chat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,8 +37,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.22222222">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -150,8 +127,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="435" />
-    <option name="y" value="185" />
+    <option name="x" value="414" />
+    <option name="y" value="87" />
     <option name="width" value="1437" />
     <option name="height" value="931" />
   </component>
@@ -490,11 +467,17 @@
       <option name="project" value="LOCAL" />
       <updated>1472089319788</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="学习cookie的使用，添加cookie-parser可以在后端读取前端设置的cookie">
+      <created>1472094122142</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1472094122142</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="435" y="185" width="1437" height="931" extended-state="0" />
+    <frame x="414" y="87" width="1437" height="931" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -536,7 +519,8 @@
     <MESSAGE value="页面2" />
     <MESSAGE value="通过子路由设置打开页面" />
     <MESSAGE value="输入实时显示，可以删除oschina的一个小项目" />
-    <option name="LAST_COMMIT_MESSAGE" value="输入实时显示，可以删除oschina的一个小项目" />
+    <MESSAGE value="学习cookie的使用，添加cookie-parser可以在后端读取前端设置的cookie" />
+    <option name="LAST_COMMIT_MESSAGE" value="学习cookie的使用，添加cookie-parser可以在后端读取前端设置的cookie" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -758,8 +742,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.22222222">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
