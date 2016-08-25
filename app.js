@@ -41,8 +41,6 @@ fs.watch('target.txt', function(event, filename){
   eventNum++;
   console.log('Event #: '+eventNum+' : '+event+' , for file: '+filename);
 });
-
-
 console.log('Now watching target for changes...');
 
 function strictAdd(x, y, callBack){
