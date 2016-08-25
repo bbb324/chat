@@ -7,11 +7,13 @@ var bodyParser = require('body-parser');
 var app = express();
 var mysql = require('mysql');
 var jsonfile = require('jsonfile');
+var cookiePraser = require('cookie-parser');
+
 const homeController = require('./public/controller/HomeController');
 var fs = require('fs');
 var config = require('./config.js');
-var multer = require('multer');
-var upload = multer({dest: 'uploads/'});
+var multer = require('multer'); // 文件上传
+var upload = multer({dest: 'uploads/'}); //文件上传
 var file = 'public/data/data.json';
 
 
@@ -21,7 +23,8 @@ var conn = mysql.createConnection(config.connection);
 app.set('view engine', 'xtpl');  //因为 node_modules 中 express 是 view engin 而不是 views
 app.set('views', __dirname + '/views');
 
-
+app.use(cookiePraser());            // 引入cookiePraser 可以在ajax的时候通过 req.cookies 来读取cookies，可以加参数做加密，读取通过signCookies
+app.use(cookieSession());
 app.use(express.static('/chat'));  //设置最初一级访问目录
 app.use(homeController.router); //引导对应的视图文件到controller里面去解决
 

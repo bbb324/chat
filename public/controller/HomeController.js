@@ -17,6 +17,8 @@ class HomeController{
 
   }
   index(req, res){
+    console.log(req.cookies);
+    console.log(req.signedCookies);
     return res.render('index', {name: 'ww'});
   }
 
