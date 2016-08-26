@@ -32,9 +32,6 @@ conn.query('select * from eat', function(err, rows, fields){
   console.log(rows)
 });
 
-app.post('/add_more',upload.any(), function(req, res){
-  console.log(req)
-});
 
 var eventNum = 0;
 fs.watch('target.txt', function(event, filename){

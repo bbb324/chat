@@ -12,16 +12,26 @@ class HomeController{
     this.router = express.Router();
     this.router.use(bodyParser.urlencoded());
     this.router.use(bodyParser.json());
-    this.router.all('/', this.index);
+    this.router.all('/', this.index, this.con, this.fob);  //可以调用多个callback
     this.router.post('/searchdata', this.search);
 
   }
-  index(req, res){
-    console.log(req.cookies);
-    console.log(req.signedCookies);
-    return res.render('index', {name: 'ww'});
+
+  index(req, res, next) {
+    console.log(req.cookies);  //无签名的cookie
+    console.log(req.signedCookies); //包含签名的cookie
+    res.render('index', {name: 'ww'});
+    next();
   }
 
+  con(req, res, next) {
+    console.log('from con');
+    next();
+  }
+
+  fob(req, res) {
+    console.log('from fob');
+  }
   search(req, res) {
     var arr = [];
     var conn = mysql.createConnection(config.connection);
