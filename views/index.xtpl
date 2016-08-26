@@ -94,6 +94,7 @@ checkbox 的样式
 <!--窗口跟随滚动-->
 <div class="auto-follow"></div>
 
+<div>{{list}}</div>
 <!--多层级菜单结束-->
 <script src="/public/js/main.js"></script>
 <body>

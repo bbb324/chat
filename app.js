@@ -15,9 +15,9 @@ var config = require('./config.js');
 var multer = require('multer'); // 文件上传
 var upload = multer({dest: 'uploads/'}); //文件上传
 var file = 'public/data/data.json';
+var mongo = require('mongodb');  //使用mongodb
 
-
-var conn = mysql.createConnection(config.connection);
+var conn = mysql.createConnection(config.connectionMySQL);
 
 
 app.set('view engine', 'xtpl');  //因为 node_modules 中 express 是 view engin 而不是 views

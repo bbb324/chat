@@ -41,7 +41,8 @@
     "webpack": "^1.13.1",
     "webtorrent-cli": "^1.3.0",
     "xtemplate": "^4.5.1",
-    "xtpl": "^3.2.0"
+    "xtpl": "^3.2.0",
+    "mongodb": "~2.2.8"
   },
   "homepage": "https://github.com/bbb324/chat#readme"
 }
