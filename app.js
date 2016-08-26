@@ -67,3 +67,12 @@ strictAdd(1, 8, function(err, result){
 });
 console.log('listen on 4000');
 app.listen(4000);
+//todo
+
+
+fs.writeFile('target.txt', fs.readFile('b.txt', function (err, data) {
+    return data.toString();
+  }) + '223', (err)=> {
+  if (err)throw err;
+  console.log('done3!')
+});
