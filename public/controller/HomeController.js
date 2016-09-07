@@ -4,10 +4,15 @@
 'use strict';
 const express = require('express');
 const co = require('co');
-var mysql = require('mysql');
-var config = require('../../config.js');
-var bodyParser = require('body-parser');
-var mongodb = require('mongodb');
+const mysql = require('mysql');
+const config = require('../../config.js');
+const bodyParser = require('body-parser');
+const mongodb = require('mongodb');
+const eventproxy = require('eventproxy');
+const superagent = require('superagent');
+const cheerio = require('cheerio');
+const url = require('url');
+
 class HomeController{
   constructor(){
     this.router = express.Router();
@@ -18,6 +23,7 @@ class HomeController{
     this.router.get('/student', this.mongo);
     this.router.post('/uploadstud', this.upload);
     this.router.get('/eventproxy', this.eventproxy);
+    this.router.post('/crawler', this.agent, this.eventproxy)
   }
 
   index(req, res, next) {
@@ -92,8 +98,31 @@ class HomeController{
     });
   }
 
+  agent(req, res, next) {
+    var cnodeUrl = 'https://cnodejs.org/';
+    var ss = req.body.class;
+    superagent.get(cnodeUrl)
+      .end(function (err, rese) {
+        if (err) {
+          console.log(err)
+        }
+        var $ = cheerio.load(rese.text);
+        var option = $('#topic_list .topic_title');
+        var items = [], str = '';
+        option.each(function (idx, element) {
+          var $element = $(element);
+          items.push({
+            title: $element.attr('title'),
+            href: $element.attr('href')
+          });
+        });
+      });
+    res.render('eventproxy', {'msg': items});
+    // next();
+  }
+
   eventproxy(req, res) {
-    res.send('eventproxy')
+    res.render('eventproxy', {'msg': items});
   }
 }
 
