@@ -16,7 +16,8 @@ class HomeController{
     this.router.all('/', this.index, this.con, this.fob);  //可以调用多个callback
     this.router.post('/searchdata', this.search);
     this.router.get('/student', this.mongo);
-    this.router.post('/uploadstud', this.upload)
+    this.router.post('/uploadstud', this.upload);
+    this.router.get('/eventproxy', this.eventproxy);
   }
 
   index(req, res, next) {
@@ -91,6 +92,9 @@ class HomeController{
     });
   }
 
+  eventproxy(req, res) {
+    res.send('eventproxy')
+  }
 }
 
 
