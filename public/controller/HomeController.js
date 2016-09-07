@@ -22,7 +22,7 @@ class HomeController{
     this.router.post('/searchdata', this.search);
     this.router.get('/student', this.mongo);
     this.router.post('/uploadstud', this.upload);
-    this.router.get('/eventproxy', this.eventproxy);
+    this.router.get('/eventproxy', this.agent);
     this.router.post('/crawler', this.agent, this.eventproxy)
   }
 
@@ -97,18 +97,18 @@ class HomeController{
       res.json(arr);
     });
   }
-
   agent(req, res, next) {
     var cnodeUrl = 'https://cnodejs.org/';
     var ss = req.body.class;
+    var items = [], str = '';
+    var option = '';
     superagent.get(cnodeUrl)
       .end(function (err, rese) {
         if (err) {
           console.log(err)
         }
         var $ = cheerio.load(rese.text);
-        var option = $('#topic_list .topic_title');
-        var items = [], str = '';
+        option = $('#topic_list .topic_title');
         option.each(function (idx, element) {
           var $element = $(element);
           items.push({
@@ -116,10 +116,13 @@ class HomeController{
             href: $element.attr('href')
           });
         });
+
+        res.render('eventproxy', {'msg': items});
       });
-    res.render('eventproxy', {'msg': items});
-    // next();
+    console.log(req.item);
+    next();
   }
+
 
   eventproxy(req, res) {
     res.render('eventproxy', {'msg': items});
