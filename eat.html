@@ -2,11 +2,35 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+  <title>aaaaaa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <script src="public/js/zepto.js"></script>
+  <meta property="og:url" content="http://www.your-domain.com/your-page.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Your Website Title"/>
+  <meta property="og:description" content="Your description"/>
+  <meta property="og:image" content="http://www.your-domain.com/path/image.jpg"/>
+
+  <script src="public/js/zepto.js"></script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your share button code -->
+<div class="fb-share-button"
+     data-href=''
+     data-layout="button_count">
+</div>
+<script>
+  $('.fb-share-button').attr('data-href', location.href)
+</script>
 <ul class="eating-list">
 
 </ul>
