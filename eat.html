@@ -2,15 +2,44 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+  <title>aaaaaa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <script src="public/js/zepto.js"></script>
+  <meta property="og:url" content="http://www.your-domain.com/your-page.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Your Website Title"/>
+  <meta property="og:description" content="Your description"/>
+  <meta property="og:image" content="http://www.your-domain.com/path/image.jpg"/>
+
+  <script src="public/js/zepto.js"></script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your share button code -->
+<div class="fb-share-button" data-href="http://www.baidu.com" data-layout="button_count" data-mobile-iframe="true">
+  <a class="fb-xfbml-parse-ignore" target="_blank"
+     href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.baidu.com%2F&amp;src=sdkpreparse">Share
+  </a></div>
+<script>
+  $('.fb-share-button').attr('data-href', location.href);
+  console.log($('.fb-xfbml-parse-ignore').href);
+  var s = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href) + '/&amp;src=sdkpreparse';
+  console.log(s);
+  $('.fb-xfbml-parse-ignore').attr('href', s);
+</script>
+<img src="public/img/04.jpg">
 <ul class="eating-list">
 
 </ul>
-<button onclick="get()">吃什么3</button>
+<button onclick="get()">吃什么2</button>
 <form action="add_more" method="post">
     <input type="text" name="food">
     <input type="submit" value="submit">
