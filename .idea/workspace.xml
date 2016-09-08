@@ -89,8 +89,8 @@
       <file leaf-file-name="eat.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/eat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.913242">
-              <caret line="40" column="121" selection-start-line="40" selection-start-column="121" selection-end-line="40" selection-end-column="121" />
+            <state vertical-scroll-proportion="0.66210043">
+              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -634,7 +634,13 @@
       <option name="project" value="LOCAL" />
       <updated>1473306402430</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="去掉twitter 的固定分享图&#10;">
+      <created>1473306806941</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1473306806941</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1225,8 +1231,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/eat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.913242">
-          <caret line="40" column="121" selection-start-line="40" selection-start-column="121" selection-end-line="40" selection-end-column="121" />
+        <state vertical-scroll-proportion="0.66210043">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
           <folding />
         </state>
       </provider>
