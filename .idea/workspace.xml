@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0560f4db-06d7-41fe-8c7f-f1c9500bb64a" name="Default" comment="。io 那个是gh-page 的代码">
+    <list default="true" id="0560f4db-06d7-41fe-8c7f-f1c9500bb64a" name="Default" comment="去掉twitter 的固定分享图&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eat.html" afterPath="$PROJECT_DIR$/eat.html" />
     </list>
@@ -89,8 +89,8 @@
       <file leaf-file-name="eat.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/eat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2283105">
-              <caret line="10" column="81" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
+            <state vertical-scroll-proportion="0.913242">
+              <caret line="40" column="121" selection-start-line="40" selection-start-column="121" selection-end-line="40" selection-end-column="121" />
               <folding />
             </state>
           </provider>
@@ -628,7 +628,13 @@
       <option name="project" value="LOCAL" />
       <updated>1473304064672</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="去掉twitter 的固定分享图&#10;">
+      <created>1473306402430</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1473306402430</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -693,7 +699,8 @@
     <MESSAGE value="移除&#10;" />
     <MESSAGE value="增加mongodb 的查询与post方法" />
     <MESSAGE value="。io 那个是gh-page 的代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="。io 那个是gh-page 的代码" />
+    <MESSAGE value="去掉twitter 的固定分享图&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="去掉twitter 的固定分享图&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1218,8 +1225,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/eat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2283105">
-          <caret line="10" column="81" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.913242">
+          <caret line="40" column="121" selection-start-line="40" selection-start-column="121" selection-end-line="40" selection-end-column="121" />
           <folding />
         </state>
       </provider>
