@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0560f4db-06d7-41fe-8c7f-f1c9500bb64a" name="Default" comment="国外的社交网站分享啊">
+    <list default="true" id="0560f4db-06d7-41fe-8c7f-f1c9500bb64a" name="Default" comment="2修改名称">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eat.html" afterPath="$PROJECT_DIR$/eat.html" />
     </list>
@@ -56,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/eat.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.3469388">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -594,7 +594,13 @@
       <option name="project" value="LOCAL" />
       <updated>1474178671662</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="2修改名称">
+      <created>1474186939824</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1474186939824</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView">
@@ -663,7 +669,8 @@
     <MESSAGE value="移动分享代码到分享页面&#10;" />
     <MESSAGE value="数据更新" />
     <MESSAGE value="更新数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新数据" />
+    <MESSAGE value="2修改名称" />
+    <option name="LAST_COMMIT_MESSAGE" value="2修改名称" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1114,7 +1121,7 @@
     <entry file="file://$PROJECT_DIR$/eat.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3469388">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding />
         </state>
       </provider>
