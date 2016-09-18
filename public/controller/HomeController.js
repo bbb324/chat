@@ -12,7 +12,7 @@ const eventproxy = require('eventproxy');
 const superagent = require('superagent');
 const cheerio = require('cheerio');
 const url = require('url');
-
+const async = require('async');
 class HomeController{
   constructor(){
     this.router = express.Router();
