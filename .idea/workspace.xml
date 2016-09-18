@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0560f4db-06d7-41fe-8c7f-f1c9500bb64a" name="Default" comment="2修改名称">
+    <list default="true" id="0560f4db-06d7-41fe-8c7f-f1c9500bb64a" name="Default" comment="3修改名称">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eat.html" afterPath="$PROJECT_DIR$/eat.html" />
     </list>
     <ignored path="chat.iws" />
     <ignored mask="idea" />
@@ -55,8 +54,8 @@
       <file leaf-file-name="eat.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/eat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3469388">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.3197279">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -600,7 +599,13 @@
       <option name="project" value="LOCAL" />
       <updated>1474186939824</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="3修改名称">
+      <created>1474186959078</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1474186959078</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView">
@@ -670,7 +675,8 @@
     <MESSAGE value="数据更新" />
     <MESSAGE value="更新数据" />
     <MESSAGE value="2修改名称" />
-    <option name="LAST_COMMIT_MESSAGE" value="2修改名称" />
+    <MESSAGE value="3修改名称" />
+    <option name="LAST_COMMIT_MESSAGE" value="3修改名称" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1120,8 +1126,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/eat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3469388">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.3197279">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding />
         </state>
       </provider>
