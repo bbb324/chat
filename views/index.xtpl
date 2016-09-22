@@ -9,11 +9,93 @@
         400 - Mak1eblock Passport
     </title>
     <script src="/public/js/zepto.js"></script>
-
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/css/main.css">
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
 </head>
     <h1>ttq {{name}}</h1>
-<input type="text" class="mmm">
+<div class="ins"><input type="text" class="mmm" id="tags"></div>
+<ul class="comp"></ul>
+
+<!--通过css设置radio btn的样式-->
+radioBtn 的样式
+<div>
+    <input class="magic-radio" type="radio" name="radio" id="option_1">
+    <label class="poll-option-text" for="option_1">1本</label>
+    <input class="magic-radio" type="radio" name="radio" id="option_2">
+    <label class="poll-option-text" for="option_2">2本</label>
+</div>
+<!--通过css设置radio btn的样式 end-->
+<!--通过css设置radio btn的样式-->
+checkbox 的样式
+<div>
+    <input class="magic-radio" type="checkbox" name="radio" id="option_3">
+    <label class="poll-option-text" for="option_3">3本</label>
+    <input class="magic-radio" type="checkbox" name="radio" id="option_4">
+    <label class="poll-option-text" for="option_4">4本</label>
+</div>
+<!--通过css设置radio btn的样式 end-->
+
+<div class="dropdown single-draft">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+        Dropdown
+        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li><a href="#">Separated link</a></li>
+    </ul>
+</div>
+<!--多层级菜单-->
+
+<div class="container">
+    <div class="collapse navbar-collapse multi-draft">
+        <a href="#" class="dropdown-toggle-1" data-toggle="dropdown">Menu 1 <b class="caret"></b></a>
+                <ul class="dropdown-menu multi-level">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">One more separated link</a></li>
+                    <li class="dropdown-submenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action2</a></li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action3</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">One more separated link</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+    </div><!--/.nav-collapse -->
+</div>
+<div class="test"></div>
+<!--窗口跟随滚动-->
+<div class="auto-follow"></div>
+
+<div>{{list}}</div>
+<!--多层级菜单结束-->
 <script src="/public/js/main.js"></script>
 <body>
 </body>

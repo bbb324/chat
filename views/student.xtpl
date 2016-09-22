@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>{{list[0].city}}</div>
+<!--post提交需要带上name的属性-->
+<form action="uploadstud" method="post">
+    <label>student: <input type="text" class="name" name="student"></label>
+    <label>street: <input type="text" class="street" name="street"></label>
+    <label>city: <input type="text" class="city" name="city"></label>
+    <label>state: <input type="text" class="state" name="state"></label>
+    <button type="submit">提交</button>
+</form>
+</body>
+</html>
