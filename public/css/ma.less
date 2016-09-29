@@ -1,28 +1,60 @@
-@background: url('../img/04.jpg');
+@background: url('../img/04.jpg') no-repeat;
 @bgColor: #5b83ad+#111;
-body{
+@wi: 50px;
+@hi: 50px;
+
+.center{
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+body {
   color: red;
 }
-.bb{
-  display: block;
-  width: 220px;
-  height: 220px;
-  background: @background;
+.bb-div, .cc-div{
+  width: 130px;
+  height: 130px;
+  border: 1px solid red;
 }
-.cls{
-  width: 100px;
+.bb {
+  display: block;
+  width: @wi;
+  height: @hi;
+  background: @background;
+  background-size: 50px;
+  .center;
+}
+
+.ff {
+  display: block;
+  width: @wi;
+  height: @hi;
+  background: @background;
+  background-size: 50px;
+ .center;
+}
+
+.cls {
+  width: 10px;
   background: red;
-  &:hover{
+  &:hover {
     background: yellow;
   }
 }
-.cc{
+
+.cc {
   float: left;
   width: 52px;
   height: 50px;
   background: @bgColor;
 }
-.cls:after{
+
+.cls:after {
   content: '';
   display: block;
   font-size: 0px;
@@ -31,13 +63,14 @@ body{
   height: 0;
 }
 
-.dd:extend(.clx){
+.dd:extend(.clx) {
   display: block;
   width: 50px;
   height: 50px;
   .cc;
 }
-.clx{
+
+.clx {
   width: 150px;
   background: #000000;
 }
