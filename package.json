@@ -19,6 +19,7 @@
     "url": "https://github.com/bbb324/chat/issues"
   },
   "dependencies": {
+    "application-name": "file:react",
     "async": "~0.9.0",
     "cheerio": "~0.17.0",
     "eventproxy": "^0.3.5",
@@ -26,13 +27,14 @@
     "moment": "~2.8.1",
     "request": "~2.40.0",
     "solr": "~0.2.2",
+    "superagent": "^0.20.0",
     "tldjs": "~1.5.0",
     "underscore": "~1.6.0",
-    "utils-merge": "~1.0.0",
-    "superagent": "^0.20.0"
+    "utils-merge": "~1.0.0"
   },
   "homepage": "https://github.com/bbb324/chat#readme",
   "devDependencies": {
-    "async": "^0.9.2"
+    "async": "^0.9.2",
+    "webpack": "^1.13.2"
   }
 }
