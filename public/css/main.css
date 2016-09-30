@@ -95,7 +95,6 @@ input[type=checkbox]:checked + label {
 .dropdown-submenu:hover > .dropdown-menu {
     display: block;
 }
-
 .dropdown-submenu > a:after {
     display: block;
     content: " ";
