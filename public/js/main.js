@@ -5,7 +5,7 @@
 
       moba +=get_tmp(value);
     });
-    $('.eating-list').html(moba);
+    $('.eating-list').append(moba);
   })
 })();
 

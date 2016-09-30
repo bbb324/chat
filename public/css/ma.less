@@ -73,4 +73,17 @@ body {
 .clx {
   width: 150px;
   background: #000000;
+  &:after{
+    content: '';
+    display: block;
+    font-size: 0px;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+  }
+}
+.list-cover{
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
