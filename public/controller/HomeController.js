@@ -98,7 +98,7 @@ class HomeController{
     });
   }
   agent(req, res, next) {
-    var cnodeUrl = 'https://cnodejs.org/';
+    var cnodeUrl = 'http://ris.szfdc.gov.cn/credit/showcjgs/ysfcjgs.aspx?cjType=0';
     var ss = req.body.class;
     var items = [], str = '';
     var option = '';
@@ -108,7 +108,8 @@ class HomeController{
           console.log(err)
         }
         var $ = cheerio.load(rese.text);
-        option = $('#topic_list .topic_title');
+        option = $('clientList1');
+        document.getElementsByClassName('clientList1');
         option.each(function (idx, element) {
           var $element = $(element);
           items.push({
