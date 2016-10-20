@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="public/css/todoCss.css">
+    l
     <script src="public/js/vue.js"></script>
 </head>
 <body>
 <div id="vue-app">
     <div class="col-sm-12">
-        <h1>Todos</h1>
-        <ul class="list-group">
-            <li class="list-group-item" v-for="todo in todos">
+        <h1>Todos {{todoCount}}</h1>
+        <ul class="list-group" v-if="todos.length>0"> <!--todo's if-else 用法-->
+            <li class="list-group-item"
+                v-for="todo in todos"
+                v-bind:class="{'completed':todo.completed}"> <!--如果满足条件则 classList 增加 ‘completed’-->
                 {{todo.title}}
                 <button v-on:click="delTodo(todo)">Del</button>
+                <button
+                        v-bind:class="{'btn-success': todo.completed, 'btn-danger': !todo.completed}"
+                        v-on:click="todoCompleted(todo)">{{todo.completed? 'Completed':'Pending'}}
+                </button>
             </li>
         </ul>
+        <div v-else>no todo anymore</div>
+        <!--todo's if-else 用法-->
         <form v-on:submit.prevent="addNewTodo(newTodo)">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Add a new one" v-model="newTodo.title"/>

@@ -1,0 +1,11 @@
+li.completed {
+    text-decoration: line-through;
+}
+
+.btn-success {
+    color: #006666;
+}
+
+.btn-danger {
+    color: red;
+}
