@@ -1,0 +1,15 @@
+.borderStyle {
+  border: 1px solid black;
+  padding: 10px;
+  color: brown;
+}
+
+$color: red;
+body {
+  background-color: $color;
+}
+
+li {
+  @extend .borderStyle;
+  margin-top: -1px;
+}
