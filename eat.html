@@ -9,74 +9,49 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-<style>
-  section li:nth-child(even) {
-    color: #ededed;
-    width: 6%;
-    font-size: 2.5em;
-    height: 63px;
-    margin-top: 31.5px;
-    line-height: 63px;
-  }
-
-  section span {
-    padding: 15px 0;
-    font-size: 5em;
-    display: block;
-    color: steelblue;
-    transition: all .2s ease-in-out;
-  }
-
-  section li:hover span {
-    transform: translateY(-10px);
-  }
-</style>
-<li>
-  <span class="icon-pencil"></span>
-  Analyze
-</li>
-<li> +</li>
-<li>
-  <span class="icon-paint-format"></span>
-  Design
-</li>
-<li> +</li>
-
-
-<div class="list-group">
-  <a class="list-group-item" href="＃"><i class="fa fa-home fa-fw"></i> Home</a>
-  <a class="list-group-item" href="＃"><i class="fa fa-book fa-fw"></i> Library</a>
-  <a class="list-group-item" href="＃"><i class="fa fa-pencil fa-fw"></i> Applications</a>
-  <a class="list-group-item" href="＃"><i class="fa fa-cog fa-fw"></i> Settings</a>
-</div>
-<i class="fa fa-spinner fa-spin"></i>
-<i class="fa fa-circle-o-notch fa-spin"></i>
-<i class="fa fa-refresh fa-spin"></i>
-<i class="fa fa-cog fa-spin"></i>
-<i class="fa fa-car"></i>
-<i class="fa fa-car fa-3x"></i>
-<span class="fa icon-home2"></span>
-
-
-<ul class="eating-list">
-
-</ul>
-<button onclick="get()">吃什么1</button>
-<form action="add_more" method="post">
-    <input type="text" name="food">
-    <input type="submit" value="submit">
-</form>
-<script src="public/js/main.js"></script>
-<script src="public/js/main.js"></script>
-<script>
-    function get(){
-       var i = ran(0, $('.eating-list li').length);
-        alert($('.eating-list li')[i].innerText)
+  <h1>Call, Apply 的区别</h1>
+  call 用法
+  <pre>
+  <code class='lanugage-pascal'>
+    var arr = {num: 2};
+    var func = function (val,val2) {
+      return this.num+val;
+    };
+    console.log(func.call(arr, 2));  //functionname.call(obj, functionArguments)
+  </code>
+  </pre>
+  apply 用法
+  <pre>
+  <code class='lanugage-pascal'>
+    var obj = {num: 2};
+    var obj2 = {num: 5};
+    var add = function(a,b,c) {
+      return this.num+a+b+c;
     }
-    var ran = function(lowerValue, upperValue){
-        var choice = upperValue - lowerValue;
-        return Math.floor(Math.random()*choice+lowerValue);
+    var arr = [1,2,3];
+    console.log(add.apply(obj, arr)); //functionname.call(obj, functionArguments)
+  </code>
+  </pre>
+  <pre>
+  <code class='lanugage-pascal'>
+    var obj = {num: 2};
+    var obj2 = {num: 5};
+    var add = function(a,b,c) {
+      return this.num+a+b+c;
     }
-</script>
+    var arr = [1,2,3];
+    console.log(add.apply(obj, arr)); //functionname.call(obj, functionArguments)
+  </code>
+  </pre>
+  <pre>
+    <code>
+    var obj = {num: 5};
+    var add = function(a,b,c) {
+      return this.num+a+b+c;
+    }
+    var bound = add.bind(obj);
+    console.log(bound(3,4,5));
+    </code>
+  </pre>
 </body>
 </html>

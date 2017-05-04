@@ -18,7 +18,7 @@ class HomeController{
     this.router = express.Router();
     this.router.use(bodyParser.urlencoded());
     this.router.use(bodyParser.json());
-    this.router.all('/', this.index, this.con, this.fob);  //可以调用多个callback
+    this.router.all('/', this.index, this.con, this.fob, this.agent);  //可以调用多个callback
     this.router.post('/searchdata', this.search);
     this.router.get('/student', this.mongo);
     this.router.post('/uploadstud', this.upload);
