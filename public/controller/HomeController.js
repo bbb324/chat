@@ -3,15 +3,12 @@
  */
 'use strict';
 const express = require('express');
-const co = require('co');
-const mysql = require('mysql');
+//const co = require('co');
+//const mysql = require('mysql');
 const config = require('../../config.js');
 const bodyParser = require('body-parser');
-const mongodb = require('mongodb');
+//const mongodb = require('mongodb');
 const eventproxy = require('eventproxy');
-const superagent = require('superagent');
-const cheerio = require('cheerio');
-const url = require('url');
 const async = require('async');
 class HomeController{
   constructor(){
@@ -19,6 +16,7 @@ class HomeController{
     this.router.use(bodyParser.urlencoded());
     this.router.use(bodyParser.json());
     this.router.all('/', this.index);
+    
     //this.router.get('/sprider', this.agent);
    /* this.router.all('/', this.index, this.con, this.fob, this.agent);  //可以调用多个callback
     this.router.post('/searchdata', this.search);

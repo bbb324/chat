@@ -6,16 +6,11 @@
 </head>
 <body>
 <h1>aa</h1>
-<form method='post' action='crawler'>
-  <label>地址<input type="text" name="url"/></label>
-  <label>对象<input type="text" name="class"/></label>
-  <button type="submit">抓包</button>
-</form>
-
 <div>
+  name: {{name}}
   {{#each(msg, 'key', 'value')}}
-  <div><span>{{key.href}}</span>{{key.title}}</div>
-  {{/each}}
+ <div><span>{{key.href}}</span>{{key.title}}</div>
+ {{/each}}
 </div>
 </body>
 </html>
