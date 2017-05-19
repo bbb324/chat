@@ -54,5 +54,15 @@
     console.log(bound(3,4,5));
     </code>
   </pre>
+  <script type="text/javascript">
+  var a = {name: 'wang', age: 27};
+    function bb() {
+      var tmp = new Object();
+      for(var i in a) {
+        tmp[i] = a[i]
+      }
+      console.log(tmp);
+    }
+  </script>
 </body>
 </html>

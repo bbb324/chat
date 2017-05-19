@@ -1,5 +1,5 @@
 (()=>{
-  $.get('public/data/data.json', function(data){
+  $.get('data/data.json', function(data){
     let moba = '';
     data.map(function(value, key){
 
@@ -41,13 +41,13 @@ var getJSON = function (url) {
 };
 
 //promis 的拼接请求
-getJSON('/public/data/data.json')
+getJSON('data/data.json')
   .then(function (data) {
     console.log(data);
     return data[0].name;
   })
   .then(function (post) {
-    getJSON('/public/data/' + post + '.json').then(function (d) {
+    getJSON('data/' + post + '.json').then(function (d) {
       console.log(d);
     })
 

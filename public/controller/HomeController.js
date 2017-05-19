@@ -18,22 +18,22 @@ class HomeController{
     this.router = express.Router();
     this.router.use(bodyParser.urlencoded());
     this.router.use(bodyParser.json());
-    this.router.all('/', this.index, this.con, this.fob, this.agent);  //可以调用多个callback
+    this.router.all('/', this.index);
+    //this.router.get('/sprider', this.agent);
+   /* this.router.all('/', this.index, this.con, this.fob, this.agent);  //可以调用多个callback
     this.router.post('/searchdata', this.search);
     this.router.get('/student', this.mongo);
     this.router.post('/uploadstud', this.upload);
     this.router.get('/eventproxy', this.agent);
-    this.router.post('/crawler', this.agent, this.eventproxy)
+    this.router.post('/crawler', this.agent, this.eventproxy)*/
   }
 
   index(req, res, next) {
-    console.log(req.cookies);  //无签名的cookie
-    console.log(req.signedCookies); //包含签名的cookie
-    res.render('index', {name: 'ww'});
-    next();
+    res.render('index', {name: 'wsw'});
+    //next();
   }
 
-  mongo(req, res, next) {
+  /*mongo(req, res, next) {
     var MongoClient = mongodb.MongoClient;
     var url = 'mongodb://localhost:27017/local';
     MongoClient.connect(url, function (err, db) {
@@ -96,9 +96,9 @@ class HomeController{
       }
       res.json(arr);
     });
-  }
-  agent(req, res, next) {
-    var cnodeUrl = 'http://ris.szfdc.gov.cn/credit/showcjgs/ysfcjgs.aspx?cjType=0';
+  }*/
+ /* agent(req, res, next) {
+    var cnodeUrl = '';
     var ss = req.body.class;
     var items = [], str = '';
     var option = '';
@@ -118,16 +118,16 @@ class HomeController{
           });
         });
 
-        res.render('eventproxy', {'msg': items});
+        res.send('eventproxy', {'msg': items});
       });
     console.log(req.item);
     next();
-  }
+  }*/
 
 
-  eventproxy(req, res) {
+  /*eventproxy(req, res) {
     res.render('eventproxy', {'msg': items});
-  }
+  }*/
 }
 
 
