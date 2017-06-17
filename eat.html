@@ -9,60 +9,17 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-  <h1>Call, Apply 的区别</h1>
-  call 用法
-  <pre>
-  <code class='lanugage-pascal'>
-    var arr = {num: 2};
-    var func = function (val,val2) {
-      return this.num+val;
-    };
-    console.log(func.call(arr, 2));  //functionname.call(obj, functionArguments)
-  </code>
-  </pre>
-  apply 用法
-  <pre>
-  <code class='lanugage-pascal'>
-    var obj = {num: 2};
-    var obj2 = {num: 5};
-    var add = function(a,b,c) {
-      return this.num+a+b+c;
-    }
-    var arr = [1,2,3];
-    console.log(add.apply(obj, arr)); //functionname.call(obj, functionArguments)
-  </code>
-  </pre>
-  bind 的用法
-  <pre>
-  <code class='lanugage-pascal'>
-    var obj = {num: 2};
-    var obj2 = {num: 5};
-    var add = function(a,b,c) {
-      return this.num+a+b+c;
-    }
-    var arr = [1,2,3];
-    console.log(add.apply(obj, arr)); //functionname.call(obj, functionArguments)
-  </code>
-  </pre>
-  <pre>
-    <code>
-    var obj = {num: 5};
-    var add = function(a,b,c) {
-      return this.num+a+b+c;
-    }
-    var bound = add.bind(obj);
-    console.log(bound(3,4,5));
-    </code>
-  </pre>
+  <div id='tt'>
+    <span class='tt'>a</span>
+    <span class='tt'>b</span>
+    <span class='tt'>cdd</span>
+  </div>
+ 
   <script type="text/javascript">
-  var a = {name: 'wang', age: 27};
-    function bb() {
-      var tmp = new Object();
-      for(var i in a) {
-        tmp[i] = a[i]
-      }
-      console.log(tmp);
-    }
+  var s = document.getElementsByClassName('tt');
+    EventUtil.addHandler(s, 'click', (e)=>{
+      console.log(e);
+    })
   </script>
 </body>
 </html>
