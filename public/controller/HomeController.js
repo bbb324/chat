@@ -16,19 +16,11 @@ class HomeController{
     this.router.use(bodyParser.urlencoded());
     this.router.use(bodyParser.json());
     this.router.all('/', this.index);
-    
-    //this.router.get('/sprider', this.agent);
-   /* this.router.all('/', this.index, this.con, this.fob, this.agent);  //可以调用多个callback
-    this.router.post('/searchdata', this.search);
-    this.router.get('/student', this.mongo);
-    this.router.post('/uploadstud', this.upload);
-    this.router.get('/eventproxy', this.agent);
-    this.router.post('/crawler', this.agent, this.eventproxy)*/
   }
 
   index(req, res, next) {
     res.render('index', {name: 'wsw'});
-    //next();
+   
   }
 
   /*mongo(req, res, next) {
