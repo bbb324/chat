@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>搜索到存入数据库</title>
+  <title></title>
 </head>
 <body>
 <h1>aa</h1>
 <div>
   name: {{name}}
   {{#each(msg, 'key', 'value')}}
- <div><span>{{key.href}}</span>{{key.title}}</div>
+ <div>{{key.index}}
+ <a href={{key.href}}>观影连接</a>
+ <span>{{key.title}}</span>
+ <span>{{key.rating}}</span>
+ <a href={{key.ticket}}>购票链接</a>
+ </div>
  {{/each}}
+ <div>总电影数量：{{count}}</div>
 </div>
 </body>
 </html>

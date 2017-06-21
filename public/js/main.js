@@ -1,4 +1,3 @@
-
 class main {
   init() {
     console.log(123);

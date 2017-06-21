@@ -70,7 +70,6 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-
 class main {
   init() {
     console.log(123);
