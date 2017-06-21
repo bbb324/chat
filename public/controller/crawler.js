@@ -5,39 +5,30 @@ const eventproxy = require('eventproxy');
 const superagent = require('superagent');
 const cheerio = require('cheerio');
 const http = require('http');
+const mongoose = require('mongoose');
 const URL = 'https://movie.douban.com/';
 const async = require('async');
+const config = require('../../config.js');
+const Appslf = require('../db/Appslf');
 
 class Crawler {
   constructor() {
     this.router = express.Router();
-    //this.router.use(bodyParser.urlencoded());
-    //this.router.use(bodyParser.json());
-    this.router.get('/eventproxy', this.agent.bind(this), this.sig.bind(this));
-    //this.router.get('/eventproxy', this.spe.bind(this));
+    this.router.get('/eventproxy', this.initDB.bind(this), this.agent.bind(this), this.toDB.bind(this));
     this.items = [];
     this.ep = new eventproxy();
     this.count = 1;
-  }
+    this.data = [{title: 1, name:'a'}, {title: 2, name: 'b'}]
 
-  spe(req, res) {
-    superagent.get('https://cnodejs.org/topic/59449c34ff5813233faad94d')
-      .end(function(err, sres) {
-        let arr = [];
-        let $ = cheerio.load(sres.text);
-        let user = $('.user_name a').attr('href');
-        arr.push({
-          title: 1,
-          href: user
-        });
-        res.render('eventproxy', {
-          msg: arr
-        });
-      })
   }
-
   agent(req, res, next) {
-    let self = this;
+
+    Appslf.Query("edf").then((res)=>{
+      console.log(res);
+    }).catch(function(err) {
+      console.log(err);
+    })
+    /*let self = this;
     superagent.get(URL)
       .end(function(err, sres) {
         if(err) {
@@ -59,38 +50,27 @@ class Crawler {
             });
           }
         });
-        //self.sig(self.items);
         res.render('eventproxy', {
           msg: self.items,
           count: self.count
         });
-        //next();
-      });
+        next();
+      });*/
   }
-  sig(req, res) {
-    let self = this;
-    let re = [];
-    let url = 'https://cnodejs.org';
-    this.items.forEach((item) => {
-      superagent.get(url + item.href)
-        .end((err, sres) => {
-          if(err) {
-            return res.send();
-          }
-          console.log(url + item.href);
-          let $ = cheerio.load(sres.text);
-          let option = $('.user_name')[0];
-          //console.log(sres.text);
-          console.log(option);
-          re.push({
-            title: 1,
-            href: option
-          });
-        })
-    })
-    res.render('eventproxy', {
-      msg: re
+  toDB() {
+    //console.log(this.items);
+    let Schema = mongoose.Schema;
+  }
+  initDB(req, res, next) {
+    console.log(123);
+    var name = 'abc';
+    var title = 'edf';
+    Appslf.Insert(name, title).then(function(cloudId) {
+      console.log(cloudId);
+    }).catch(function(err) {
+      console.log(err);
     });
+    next();
   }
 }
 
