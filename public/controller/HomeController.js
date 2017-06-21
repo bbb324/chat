@@ -3,37 +3,27 @@
  */
 'use strict';
 const express = require('express');
-const co = require('co');
-const mysql = require('mysql');
+//const co = require('co');
+//const mysql = require('mysql');
 const config = require('../../config.js');
 const bodyParser = require('body-parser');
-const mongodb = require('mongodb');
+//const mongodb = require('mongodb');
 const eventproxy = require('eventproxy');
-const superagent = require('superagent');
-const cheerio = require('cheerio');
-const url = require('url');
 const async = require('async');
 class HomeController{
   constructor(){
     this.router = express.Router();
     this.router.use(bodyParser.urlencoded());
     this.router.use(bodyParser.json());
-    this.router.all('/', this.index, this.con, this.fob);  //可以调用多个callback
-    this.router.post('/searchdata', this.search);
-    this.router.get('/student', this.mongo);
-    this.router.post('/uploadstud', this.upload);
-    this.router.get('/eventproxy', this.agent);
-    this.router.post('/crawler', this.agent, this.eventproxy)
+    this.router.all('/', this.index);
   }
 
   index(req, res, next) {
-    console.log(req.cookies);  //无签名的cookie
-    console.log(req.signedCookies); //包含签名的cookie
-    res.render('index', {name: 'ww'});
-    next();
+    res.render('index', {name: 'wsw'});
+   
   }
 
-  mongo(req, res, next) {
+  /*mongo(req, res, next) {
     var MongoClient = mongodb.MongoClient;
     var url = 'mongodb://localhost:27017/local';
     MongoClient.connect(url, function (err, db) {
@@ -96,9 +86,9 @@ class HomeController{
       }
       res.json(arr);
     });
-  }
-  agent(req, res, next) {
-    var cnodeUrl = 'https://cnodejs.org/';
+  }*/
+ /* agent(req, res, next) {
+    var cnodeUrl = '';
     var ss = req.body.class;
     var items = [], str = '';
     var option = '';
@@ -108,7 +98,8 @@ class HomeController{
           console.log(err)
         }
         var $ = cheerio.load(rese.text);
-        option = $('#topic_list .topic_title');
+        option = $('clientList1');
+        document.getElementsByClassName('clientList1');
         option.each(function (idx, element) {
           var $element = $(element);
           items.push({
@@ -117,16 +108,16 @@ class HomeController{
           });
         });
 
-        res.render('eventproxy', {'msg': items});
+        res.send('eventproxy', {'msg': items});
       });
     console.log(req.item);
     next();
-  }
+  }*/
 
 
-  eventproxy(req, res) {
+  /*eventproxy(req, res) {
     res.render('eventproxy', {'msg': items});
-  }
+  }*/
 }
 
 

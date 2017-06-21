@@ -1,0 +1,30 @@
+{
+ "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+	"rules": {
+        // enable additional rules
+        "indent": ["warn", 2],
+        "quotes": ["warn", "single"],
+        "semi": ["warn", "always"],
+
+    
+        "no-console": "off"
+    },
+       "globals": {
+        "createNeuronsFlowEngine": true,
+        "console": true,
+        "device": true,
+        "ble": true,
+        "html2canvas": true,
+        "chrome": true,
+        "WifiWizard": true,
+        "QRCode": true,
+        "AppVersion": true,
+        "electron": true
+    }
+}
