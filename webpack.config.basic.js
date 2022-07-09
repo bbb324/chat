@@ -64,10 +64,17 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            url: false
+                            url: false,
                         }
                     },
-                     'less-loader'
+                    {
+                        loader: 'less-loader',
+                        options: {
+                            lessOptions: {
+                                javascriptEnabled: true
+                            }
+                        }
+                    }
                     ],
             }
         ]
