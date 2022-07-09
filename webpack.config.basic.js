@@ -15,21 +15,41 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js'
+        filename: '[name].bundle.js'
     },
-    devtool: 'source-map',
-    optimization: {
-        minimizer: [
-          
-        ]
-    },
+    devtool: 'cheap-module-source-map',
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html',
             filename: 'index.html'
+        }),
+        new webpack.ids.DeterministicChunkIdsPlugin({
+            maxLength: 5
         })
     ],
-    mode: 'development',
+    optimization: {
+        splitChunks: {
+          chunks: 'async',
+          minSize: 20000,
+          minRemainingSize: 0,
+          minChunks: 1,
+          maxAsyncRequests: 30,
+          maxInitialRequests: 30,
+          enforceSizeThreshold: 50000,
+          cacheGroups: {
+            defaultVendors: {
+              test: /[\\/]node_modules[\\/]/,
+              priority: -10,
+              reuseExistingChunk: true,
+            },
+            default: {
+              minChunks: 2,
+              priority: -20,
+              reuseExistingChunk: true,
+            },
+          },
+        },
+    },
     module: {
         rules: [
             {
@@ -38,27 +58,27 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-react', '@babel/preset-env']
+                        presets: ['@babel/preset-react', '@babel/preset-env'],
+                        formatter: require('eslint-friendly-formatter')
                     }
                 }
             },
             {
                 test: /\.(less|css)$/,
-                use: ['style-loader', 'css-loader', 'less-loader'],
-            },
-            {
-                test: /\.js$/,
-                loader: 'eslint-loader',
-                enforce: 'pre',
-                include: [path.resolve(__dirname, 'src')],
-                options: {
-                    formatter: require('eslint-friendly-formatter')
-                }
+                use: [
+                    'style-loader', 
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            url: false
+                        }
+                    },
+                     'less-loader'
+                    ],
             }
         ]
     },
     resolve: {
-        // you can now require('file') instead of require('file.coffee')
         extensions: ['.js', '.json', '.jsx']
     }
 };
