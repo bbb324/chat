@@ -1,6 +1,0 @@
-新增 git lg命令，便于查看修改日志：
-
-git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-
-
-git rebase -i 对应的分支去rebase
