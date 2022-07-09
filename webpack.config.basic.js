@@ -20,27 +20,14 @@ module.exports = {
     devtool: 'source-map',
     optimization: {
         minimizer: [
-            // we specify a custom UglifyJsPlugin here to get source maps in production
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: true,
-                uglifyOptions: {
-                    compress: false,
-                    ecma: 6,
-                    mangle: true
-                },
-                sourceMap: true
-            })
+          
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html',
             filename: 'index.html'
-        }),
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': '"production"'
-        }),
+        })
     ],
     mode: 'development',
     module: {

@@ -1,0 +1,4 @@
+{
+  "header": "./src/header/index.jsx",
+  "body": "./src/body/index.jsx"
+}
