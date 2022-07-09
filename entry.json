@@ -1,4 +1,5 @@
 {
   "header": "./src/header/index.jsx",
-  "body": "./src/body/index.jsx"
+  "body": "./src/body/index.jsx",
+  "homePage": "./src/homePage/index.jsx"
 }

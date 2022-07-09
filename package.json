@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "dev": "webpack --config webpack.config.basic.js --progress --watch --hot",
+    "dev": "webpack --config webpack.config.dev.js --progress --watch --hot",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext .js --ext .jsx src",

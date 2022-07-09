@@ -2,7 +2,6 @@
  * Created by junxie on 18/5/27.
  */
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 const entryConfig = require('./entry.json');
@@ -19,10 +18,6 @@ module.exports = {
     },
     devtool: 'cheap-module-source-map',
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './index.html',
-            filename: 'index.html'
-        }),
         new webpack.ids.DeterministicChunkIdsPlugin({
             maxLength: 5
         })
@@ -58,8 +53,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-react', '@babel/preset-env'],
-                        formatter: require('eslint-friendly-formatter')
+                        presets: ['@babel/preset-react', '@babel/preset-env']
                     }
                 }
             },
